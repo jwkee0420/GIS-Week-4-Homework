@@ -18,6 +18,8 @@ world2 <- world %>% merge(., difference2, by.x= "color_code", by.y= "countryIsoC
 tmap_mode("plot")
 
 world2 %>%
-  qtm(.,fill = "difference")
+  qtm(.,fill = "difference") + tm_legend(legend.position = c("left", "bottom"),
+          main.title = "My title",
+          main.title.position = "right")
 
 
